@@ -13,7 +13,8 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
     public List<Producto> findByNombre(String name);
     public List<Producto> findByCantidad(int cantidad);
 
-    @Modifying(clearAutomatically = true)
-    @Query("UPDATE Productos  p set p.cantidad = p.cantidad + :newCantidad where p.id = :id")
-    Boolean updateProducto(@Param("newCantidad") int newCantidad, @Param("id") Long id);
+    //@Modifying(clearAutomatically = true)
+    //@Query("UPDATE productos p set p.cantidad = p.cantidad + :newCantidad where p.id = :id")
+    //Boolean updateProducto(@Param("newCantidad") int newCantidad, @Param("id") Long id);
+    
 }

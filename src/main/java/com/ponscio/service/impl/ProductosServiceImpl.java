@@ -44,8 +44,8 @@ public class ProductosServiceImpl implements ProductosService{
     public ProductoResponseDTO updateProducto(long id, ProductoRequestDTO dto) {
         Producto productos = productoRepository.findById(id).orElseThrow(
             () -> new RuntimeException("No se encontro el producto"));
-            productosMapper.updateEntityFromDTO(productos, dto);
-            return productosMapper.entityToDTO(productoRepository.save(productos));
+        productosMapper.updateEntityFromDTO(productos, dto);
+        return productosMapper.entityToDTO(productoRepository.save(productos));
     }
 
     @Override
